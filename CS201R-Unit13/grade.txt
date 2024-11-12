@@ -1,0 +1,10 @@
+86,Yosemite Sam
+98,Boo Boo Bear
+78,Yogi
+79,Franklin
+90,Dora the Explorer
+86,Alvin
+88,Obiwan Kenobi
+78,The Flash
+70,Patrick
+92,Spongebob Squarepants
