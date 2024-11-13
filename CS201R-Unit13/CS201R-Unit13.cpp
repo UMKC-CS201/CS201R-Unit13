@@ -9,9 +9,9 @@
 
 int main() {
     exampleList();
-    exampleQDeq();
-    examplePair();
-    exampleMap();
-    exampleSet();
+    //exampleQDeq();
+    //examplePair();
+    //exampleMap();
+    //exampleSet();
 }
  

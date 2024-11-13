@@ -23,9 +23,10 @@ void exampleQDeq() {
     int j = 1;
     cout << "\nTHERE ARE " << line1.size() << " ANIMALS IN THE QUEUE" << endl;
 
-    // NOTE: you can not 'loop' through a queue
-    //       you may only access from the top
-    //       therefore - a for loop does not work properly here - a while loop is needed
+    // NOTE: you can not 'loop' through a queue - no iteration
+    //       so NO for loop
+    //       ONLY access from the top 
+    //       here - a while loop is needed
 
     while (line1.size() > 0) {
         animal = line1.front();
@@ -45,7 +46,6 @@ void exampleQDeq() {
     }
     */
     
-    cout << "\n\n\nDEQUE EXAMPLE A:" << endl << endl;
     deque<string> line2;
 
     line2.push_back("Lion");
@@ -55,9 +55,25 @@ void exampleQDeq() {
     line2.push_back("Duck");
     line2.push_back("Goose");
 
+    //deques are iterable
+    cout << "\n\nDEQUE EXAMPLE A: PRINT WITH ITERATOR" << endl;
+    for (auto id = line2.begin(); id != line2.end(); ++id) {
+        cout << *id << " ";
+    }
+    cout << endl;
+
+    //deques are iterable
+    cout << "\n\nDEQUE EXAMPLE B: PRINT WITH RANGE BASED FOR LOOP" << endl;
+    for (auto i : line2) {
+        cout << i << " ";
+    }
+    cout << endl;
+
     cout << "\nTHERE ARE " << line2.size() << " ANIMALS IN THE DEQUE" << endl;
 
-    // a while loop will work here
+
+    // a while loop will work too...but now deque is empty
+    cout << "\n\nDEQUE EXAMPLE C: PRINT WITH WHILE LOOP" << endl;
     j = 1;
     while (line2.size() > 0) {
         animal = line2.front();
@@ -66,7 +82,7 @@ void exampleQDeq() {
         j++;
     }
 
-    cout << "\n\nDEQUE EXAMPLE B: MIN, MAX, FIND" << endl << endl;
+    cout << "\n\nDEQUE EXAMPLE D: MIN, MAX, FIND" << endl << endl;
     line2.push_front("Lion");
     line2.push_front("Tiger");
     line2.push_front("Bear");
@@ -93,27 +109,26 @@ void exampleQDeq() {
     else
         cout << "Bear 2 not found\n";
 
-    cout << "\n\nDEQUE EXAMPLE C: PRINT WITH ITERATOR\n\n";
+    cout << "\n\nDEQUE EXAMPLE E: PRINT WITH ITERATOR\n\n";
     //NEED TO IMPLEMENT
     //decLare a new iterator & print the deque using a standard for loop
-    deque<string> ::iterator it5;
-    for (it5 = line2.begin(); it5 != line2.end(); it5++)
-        cout << *it5 << endl;
 
 
-    cout << "\n\nDEQUE EXAMPLE D: SORT & PRINT WITH RANGE BASED FOR LOOP\n\n";
+
+    cout << "\n\nDEQUE EXAMPLE F: SORT & PRINT WITH RANGE BASED FOR LOOP\n\n";
     //NEED TO IMPLEMENT
     //use sort command to sort list
-    sort(line2.begin(), line2.end());
+
 
     //print deque using range based for loop
-    for (auto its : line2)
-        cout << its << endl;
 
 
+
+    cout << "\n\nDEQUE EXAMPLE G:  DEQUE - STANDARD FOR LOOP" << endl << endl;
+    //NEED TO IMPLEMENT
     //print elements using iterator & remove from the deque
-    cout << "\n\nDEQUE EXAMPLE E:  DEQUE - STANDARD FOR LOOP" << endl << endl;
-    j = 1;
+
+
 
     cout << "Exiting line 2" << endl;
 

@@ -14,8 +14,8 @@ struct TV {
 
 void exampleList();
 int loadListData(list<TV>& TVShows, list<string>& TVNames);
-void removeList(list<TV>& TVShows, int key);
 void removeList(list<string>& TVNames, string key);
+void removeList(list<TV>& TVShows, int key);
 void printList(list<TV> TVShows);
 void printList(list<string> TVNames);
 
@@ -28,12 +28,13 @@ void exampleList() {
 	list<string>TVNames;
 	loadListData(TVShows, TVNames);
 
+
     cout << "\n\nLIST EXAMPLE B: REMOVING DATA FROM LIST\n";
     cout << "Your turn\n";
 	//NEED TO IMPLEMENT : remove
-	removeList(TVShows, 20);
     removeList(TVNames, "Bonanza");
     removeList(TVNames, "Blue Bloods");
+    removeList(TVShows, 20);
 
     cout << "\n\nLIST EXAMPLE C: SORTING LIST DATA\n";
     cout << "Your turn\n";
@@ -96,18 +97,18 @@ int loadListData(list<TV>& TVShows, list<string>& TVNames) {
     return 0;
 }
 
-void removeList(list<TV>& TVShows, int key) {
-    //NEED TO IMPLEMENT
-    //create an iterator
-
-    //loop through list to find key to erase
-    //if found erase the key and decrement the iterator
-
-}
 
 void removeList(list<string>& TVNames, string key) {
     //NEED TO IMPLEMENT
     //use list.remove();
+
+}
+void removeList(list<TV>& TVShows, int key) {
+    //NEED TO IMPLEMENT
+    //we can not use 'remove' because TV is a struct type
+    //  create an iterator
+    //  loop through list to find key to erase
+    //  if found erase the key and decrement the iterator
 
 }
 
@@ -122,8 +123,6 @@ void printList(list<TV> TVShows) {
 void printList(list<string> TVNames) {
     //NEED TO IMPLEMENT
     cout << "\n\nPrint Shows Using Iterator\n";
-    TVNames.sort();
-    for (auto i : TVNames)
-        cout << i << endl;
+
 
 }
