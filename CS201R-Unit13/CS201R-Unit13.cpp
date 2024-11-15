@@ -9,8 +9,8 @@
 #include "exampleQDeq.h"
 
 int main() {
-    exampleList();
-    //exampleQDeq();
+    //exampleList();
+    exampleQDeq();
     //examplePair();
     //exampleMap();
     //exampleSet();

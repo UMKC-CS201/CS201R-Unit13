@@ -1,5 +1,6 @@
 #pragma once
 #include <queue>
+#include <deque>
 #include <iostream>
 #include <fstream>
 #include <sstream>
@@ -82,7 +83,7 @@ void exampleQDeq() {
         j++;
     }
 
-    cout << "\n\nDEQUE EXAMPLE D: MIN, MAX, FIND" << endl << endl;
+
     line2.push_front("Lion");
     line2.push_front("Tiger");
     line2.push_front("Bear");
@@ -94,42 +95,46 @@ void exampleQDeq() {
     // delcare iterator
     deque<string>::iterator it4;
 
+    cout << "\n\nDEQUE EXAMPLE D: FIND MIN" << endl << endl;
     //use min_element to find the location of the minimum element
-    it4 = min_element(line2.begin(), line2.end());
-    cout << *it4 << " is the minimum element\n";
-
+    //your turn
+ 
+    cout << "\n\nDEQUE EXAMPLE E: FIND MAX" << endl << endl;
     //use max_element to find the location of the maximum element
-    it4 = max_element(line2.begin(), line2.end());
-    cout << *it4 << " is the maximum element\n";
+    //your turn
 
+    cout << "\n\nDEQUE EXAMPLE F: FIND KEY" << endl << endl;
     //use find to find "Bear"
-    it4 = find(line2.begin(), line2.end(), "Bear2");
-    if (it4 != line2.end())
-        cout << *it4 << " is equal to Bear\n";
-    else
-        cout << "Bear 2 not found\n";
+    //your turn
 
-    cout << "\n\nDEQUE EXAMPLE E: PRINT WITH ITERATOR\n\n";
+
+    cout << "\n\nDEQUE EXAMPLE G: PRINT WITH ITERATOR\n\n";
     //NEED TO IMPLEMENT
     //decLare a new iterator & print the deque using a standard for loop
+ 
 
-
-
-    cout << "\n\nDEQUE EXAMPLE F: SORT & PRINT WITH RANGE BASED FOR LOOP\n\n";
+    cout << "\n\nDEQUE EXAMPLE H: SORT & PRINT WITH RANGE BASED FOR LOOP\n\n";
     //NEED TO IMPLEMENT
-    //use sort command to sort list
-
-
     //print deque using range based for loop
+ 
 
 
-
-    cout << "\n\nDEQUE EXAMPLE G:  DEQUE - STANDARD FOR LOOP" << endl << endl;
+    cout << "\n\nDEQUE EXAMPLE I:  DEQUE - LOOP TO EMPTY QUEUE" << endl << endl;
     //NEED TO IMPLEMENT
-    //print elements using iterator & remove from the deque
+    //print elements using while loop, remove from the deque
 
 
 
-    cout << "Exiting line 2" << endl;
-
+    //The following logic works in repl.it and possibly in other compilers
+    //this will not work in Visual Studio however
+    /*
+    deque<string>::iterator it2;
+    j = 1;
+    for (it2 = line2.begin(); it2 != line2.end(); ++it2) {
+        animal = line2.front();
+        cout << j << " : " << animal << " exits the front of the line" << endl;
+        line2.pop_front();
+        j++;
+    }
+    */
 }

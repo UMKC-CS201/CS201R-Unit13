@@ -85,9 +85,11 @@ int loadListData(list<TV>& TVShows, list<string>& TVNames) {
 
             //loop through list until iterator is where we need to insert
 
+
             //insert in the list
 
         }
+
         catch (invalid_argument& e) {
             cout << e.what() << " can not be converted to int" << endl;
             return -1;
@@ -103,10 +105,12 @@ void removeList(list<string>& TVNames, string key) {
     //use list.remove();
 
 }
+
 void removeList(list<TV>& TVShows, int key) {
     //NEED TO IMPLEMENT
     //we can not use 'remove' because TV is a struct type
     //  create an iterator
+
     //  loop through list to find key to erase
     //  if found erase the key and decrement the iterator
 
@@ -116,8 +120,6 @@ void removeList(list<TV>& TVShows, int key) {
 void printList(list<TV> TVShows) {
     //NEED TO IMPLEMENT
     cout << "\n\nPrint TV Shows Using Range Based For Loop\n";
-
-
 }
 
 void printList(list<string> TVNames) {
